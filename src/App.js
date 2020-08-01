@@ -1,18 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const todos = ["Go to market", "Buy food", "Make dinner"];
+import TodoItem from './component/TodoItem'
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <div>
-        <ul>
-          {todos.map(item => {
-            return <li>{item}</li>
-          })}
-        </ul>
+        <TodoItem/>
       </div>
     );
   }
