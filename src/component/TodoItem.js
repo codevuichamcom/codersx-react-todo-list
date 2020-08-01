@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 
-const todos = ["Go to market", "Buy food", "Make dinner"];
+import './TodoItem.css'
 
 export default class TodoItem extends Component {
     render() {
+        let {item} = this.props;
+        let className="TodoItem";
+
+        if(item.isComplete){
+            className+= " TodoItem-complete";
+        }
         return (
-            <ul>
-                {todos.map((item,index) => {
-                    return <li key={index}>{item}</li>
-                })}
-            </ul>
+            <div className={className}>
+                <p>{item.title}</p>
+            </div>
         );
     }
 }
