@@ -33,7 +33,7 @@ export default class Header extends Component {
         const {textValue} = this.state;
         return (
             <div className="Header">
-                <img onClick={checkAllItem} src={checkAll} width={32} height={32} />
+                <img onClick={checkAllItem} src={checkAll} width={32} height={32} alt='' />
                 <input type="text" placeholder="Enter new to do item" value={textValue}
                     onChange={(event) => { this.onChange(event) }}
                     onKeyUp={(event) => { this.onKeyUp(event) }} />

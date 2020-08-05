@@ -12,7 +12,7 @@ export default class App extends Component {
       todos: [
         { title: "Go to market", isComplete: true },
         { title: "Buy food", isComplete: true },
-        { title: "Make dinner" }
+        { title: "Make dinner", isComplete: false }
       ]
     }
   }
@@ -27,7 +27,7 @@ export default class App extends Component {
   }
   save = (item) => {
     let newData = [...this.state.todos];
-    newData.push({ title: item });
+    newData.push({ title: item, isComplete:false });
     this.setState({ todos: newData });
   }
 
